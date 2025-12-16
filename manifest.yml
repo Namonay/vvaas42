@@ -22,7 +22,6 @@ kind: Service
 metadata:
   name: app-service
 spec:
-  type: ClusterIP
   selector:
     app: app-p3
   ports:
