@@ -35,7 +35,8 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - http:
+  - host: argo-app.com
+    http:
       paths:
       - backend:
           service:
