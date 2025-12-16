@@ -33,14 +33,14 @@ kind: Ingress
 metadata:
   name: app-ingress
 spec:
+  ingressClassName: traefik
   rules:
-    - host: localhost
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: app-service
-                port:
-                  number: 8888
+  - http:
+      paths:
+      - backend:
+          service:
+            name: app-service
+            port:
+              number: 8888
+        path: /
+        pathType: Prefix
