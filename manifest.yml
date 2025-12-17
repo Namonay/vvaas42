@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: app-p3
-        image: wil42/playground:v2
+        image: wil42/playground:v1
         ports:
         - containerPort: 8888
 ---
@@ -23,7 +23,7 @@ metadata:
   name: app-service
 spec:
   selector:
-    app: app
+    app: app-p3
   ports:
   - name: app-port
     protocol: TCP
